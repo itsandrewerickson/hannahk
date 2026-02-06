@@ -345,7 +345,7 @@ function ValueProp() {
   ]
 
   return (
-    <section className="py-24 lg:py-32 bg-cream-50 relative overflow-hidden">
+    <section className="py-16 sm:py-24 lg:py-32 bg-cream-50 relative overflow-hidden">
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{
@@ -353,21 +353,21 @@ function ValueProp() {
         }} />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <motion.p variants={fadeUp} className="text-champagne-600 font-semibold tracking-wide uppercase text-sm mb-3">
+          <motion.p variants={fadeUp} className="text-champagne-600 font-semibold tracking-wide uppercase text-xs sm:text-sm mb-2 sm:mb-3">
             What You Get
           </motion.p>
-          <motion.h2 variants={fadeUp} className="font-display text-4xl lg:text-5xl font-semibold text-navy-900 mb-6">
+          <motion.h2 variants={fadeUp} className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-navy-900 mb-4 sm:mb-6">
             Real Estate Without the <span className="text-champagne-600">Legal Blind Spots</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-navy-700/70 text-lg max-w-2xl mx-auto">
+          <motion.p variants={fadeUp} className="text-navy-700/70 text-base sm:text-lg max-w-2xl mx-auto">
             Most agents close deals. An attorney-broker protects your future. Here's what that means for you.
           </motion.p>
         </motion.div>
@@ -378,23 +378,23 @@ function ValueProp() {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           variants={staggerContainer}
-          className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-16"
+          className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-10 sm:mb-16"
         >
           {benefits.map((benefit, index) => (
             <motion.div
               key={benefit.title}
               variants={fadeUp}
-              className="group bg-white rounded-3xl p-8 border border-cream-200 hover:border-champagne-300 hover:shadow-xl hover:shadow-champagne-500/10 transition-all duration-300"
+              className="group bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-cream-200 hover:border-champagne-300 hover:shadow-xl hover:shadow-champagne-500/10 transition-all duration-300"
             >
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 bg-gradient-to-br from-champagne-100 to-champagne-200 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <benefit.icon size={28} className="text-champagne-700" />
+              <div className="flex items-start gap-4 sm:gap-5">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-champagne-100 to-champagne-200 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <benefit.icon size={24} className="text-champagne-700 sm:w-7 sm:h-7" />
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-semibold text-navy-900 mb-2">
+                  <h3 className="font-display text-lg sm:text-xl font-semibold text-navy-900 mb-1 sm:mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-navy-700/70 leading-relaxed">
+                  <p className="text-navy-700/70 leading-relaxed text-sm sm:text-base">
                     {benefit.description}
                   </p>
                 </div>
@@ -408,30 +408,30 @@ function ValueProp() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-navy-900 rounded-3xl p-8 lg:p-12 text-center relative overflow-hidden"
+          className="bg-navy-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-center relative overflow-hidden"
         >
           {/* Decorative circles */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-champagne-500/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-champagne-500/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+          <div className="absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-champagne-500/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-32 sm:w-48 h-32 sm:h-48 bg-champagne-500/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
           <div className="relative">
-            <h3 className="font-display text-2xl lg:text-3xl font-semibold text-white mb-4">
+            <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-semibold text-white mb-3 sm:mb-4">
               Ready for Transactions That Actually <span className="text-gradient">Protect You?</span>
             </h3>
-            <p className="text-cream-200/70 mb-8 max-w-xl mx-auto">
+            <p className="text-cream-200/70 mb-6 sm:mb-8 max-w-xl mx-auto text-sm sm:text-base">
               Whether you're buying your first home or selling an inherited property, get the legal expertise that makes the difference.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-2 bg-champagne-500 hover:bg-champagne-400 text-navy-900 px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-xl hover:shadow-champagne-500/30"
+                className="group inline-flex items-center justify-center gap-2 bg-champagne-500 hover:bg-champagne-400 text-navy-900 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-semibold transition-all hover:shadow-xl hover:shadow-champagne-500/30"
               >
                 Schedule a Consultation
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href="tel:6194196517"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white px-8 py-4 rounded-xl font-medium transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-medium transition-all"
               >
                 <Phone size={18} />
                 Call Now
@@ -447,21 +447,21 @@ function ValueProp() {
 // About Section
 function About() {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-cream-100 relative overflow-hidden">
+    <section id="about" className="py-16 sm:py-24 lg:py-32 bg-cream-100 relative overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-champagne-100 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-champagne-100 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/2" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="grid lg:grid-cols-2 gap-16 items-center"
+          className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center"
         >
           {/* Image Side */}
           <motion.div variants={fadeUp} className="relative">
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-navy-900/20">
+            <div className="relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-navy-900/20">
               <img
                 src="/images/Gemini_Generated_Image_ow8f10ow8f10ow8f.png"
                 alt="Hannah Kuhami - Real Estate Attorney and Broker"
@@ -470,21 +470,21 @@ function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 to-transparent" />
             </div>
 
-            {/* Floating Card */}
+            {/* Floating Card - hidden on very small screens, repositioned on mobile */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="absolute -bottom-6 -right-6 lg:-right-12 bg-white rounded-2xl p-6 shadow-xl shadow-navy-900/10 max-w-xs"
+              className="hidden sm:block absolute -bottom-4 sm:-bottom-6 right-2 sm:-right-6 lg:-right-12 bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-xl shadow-navy-900/10 max-w-[260px] sm:max-w-xs"
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-champagne-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Award size={24} className="text-champagne-600" />
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-champagne-100 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Award size={20} className="text-champagne-600 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <p className="font-display font-semibold text-navy-900 text-lg mb-1">Dual Licensed</p>
-                  <p className="text-slate-500 text-sm">One of few professionals in San Diego holding both a law degree and broker license.</p>
+                  <p className="font-display font-semibold text-navy-900 text-base sm:text-lg mb-0.5 sm:mb-1">Dual Licensed</p>
+                  <p className="text-slate-500 text-xs sm:text-sm">One of few professionals in San Diego holding both a law degree and broker license.</p>
                 </div>
               </div>
             </motion.div>
@@ -492,15 +492,15 @@ function About() {
 
           {/* Content Side */}
           <motion.div variants={staggerContainer} className="lg:pl-8">
-            <motion.p variants={fadeUp} className="text-champagne-600 font-semibold tracking-wide uppercase text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-champagne-600 font-semibold tracking-wide uppercase text-xs sm:text-sm mb-2 sm:mb-3">
               About Hannah
             </motion.p>
-            <motion.h2 variants={fadeUp} className="font-display text-4xl lg:text-5xl font-semibold text-navy-900 mb-6 leading-tight">
+            <motion.h2 variants={fadeUp} className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-navy-900 mb-4 sm:mb-6 leading-tight">
               A Born Negotiator,<br />
               <span className="text-champagne-600">Now Your Advocate</span>
             </motion.h2>
 
-            <motion.div variants={fadeUp} className="space-y-4 text-lg text-navy-700/80 leading-relaxed mb-8">
+            <motion.div variants={fadeUp} className="space-y-3 sm:space-y-4 text-base sm:text-lg text-navy-700/80 leading-relaxed mb-6 sm:mb-8">
               <p>
                 Some people negotiate for a living. Hannah started much earlier. As a teenager, she bargained with her parents over curfews so effectively that her father joked she should go to law school.
               </p>
@@ -516,16 +516,16 @@ function About() {
             </motion.div>
 
             {/* Languages */}
-            <motion.div variants={fadeUp} className="mb-8">
-              <p className="text-sm font-semibold text-navy-900 mb-3 flex items-center gap-2">
-                <Globe size={16} className="text-champagne-500" />
+            <motion.div variants={fadeUp} className="mb-6 sm:mb-8">
+              <p className="text-xs sm:text-sm font-semibold text-navy-900 mb-2 sm:mb-3 flex items-center gap-2">
+                <Globe size={14} className="text-champagne-500 sm:w-4 sm:h-4" />
                 Languages Spoken
               </p>
               <div className="flex flex-wrap gap-2">
                 {['English', 'Spanish', 'Arabic', 'Swedish'].map((lang) => (
                   <span
                     key={lang}
-                    className="bg-champagne-50 text-champagne-700 px-4 py-1.5 rounded-full text-sm font-medium border border-champagne-200"
+                    className="bg-champagne-50 text-champagne-700 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium border border-champagne-200"
                   >
                     {lang}
                   </span>
@@ -534,16 +534,16 @@ function About() {
             </motion.div>
 
             {/* Credentials */}
-            <motion.div variants={fadeUp} className="grid grid-cols-2 gap-4">
-              <div className="bg-navy-900 rounded-2xl p-5">
-                <Scale size={24} className="text-champagne-400 mb-3" />
-                <p className="text-champagne-400 text-xs font-medium tracking-wide mb-1">CALIFORNIA BAR</p>
-                <p className="text-white font-display font-semibold">#286162</p>
+            <motion.div variants={fadeUp} className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="bg-navy-900 rounded-xl sm:rounded-2xl p-4 sm:p-5">
+                <Scale size={20} className="text-champagne-400 mb-2 sm:mb-3 sm:w-6 sm:h-6" />
+                <p className="text-champagne-400 text-[10px] sm:text-xs font-medium tracking-wide mb-0.5 sm:mb-1">CALIFORNIA BAR</p>
+                <p className="text-white font-display font-semibold text-sm sm:text-base">#286162</p>
               </div>
-              <div className="bg-navy-900 rounded-2xl p-5">
-                <Home size={24} className="text-champagne-400 mb-3" />
-                <p className="text-champagne-400 text-xs font-medium tracking-wide mb-1">DRE LICENSE</p>
-                <p className="text-white font-display font-semibold">#02023639</p>
+              <div className="bg-navy-900 rounded-xl sm:rounded-2xl p-4 sm:p-5">
+                <Home size={20} className="text-champagne-400 mb-2 sm:mb-3 sm:w-6 sm:h-6" />
+                <p className="text-champagne-400 text-[10px] sm:text-xs font-medium tracking-wide mb-0.5 sm:mb-1">DRE LICENSE</p>
+                <p className="text-white font-display font-semibold text-sm sm:text-base">#02023639</p>
               </div>
             </motion.div>
           </motion.div>
@@ -584,29 +584,29 @@ function Advantage() {
   ]
 
   return (
-    <section id="advantage" className="py-24 lg:py-32 bg-navy-900 relative overflow-hidden">
+    <section id="advantage" className="py-16 sm:py-24 lg:py-32 bg-navy-900 relative overflow-hidden">
       {/* Decorative */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 border border-champagne-400 rounded-full" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 border border-champagne-400 rounded-full" />
+        <div className="absolute top-1/4 left-1/4 w-48 sm:w-96 h-48 sm:h-96 border border-champagne-400 rounded-full" />
+        <div className="absolute bottom-1/4 right-1/4 w-32 sm:w-64 h-32 sm:h-64 border border-champagne-400 rounded-full" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <motion.p variants={fadeUp} className="text-champagne-400 font-semibold tracking-wide uppercase text-sm mb-3">
+          <motion.p variants={fadeUp} className="text-champagne-400 font-semibold tracking-wide uppercase text-xs sm:text-sm mb-2 sm:mb-3">
             The Attorney Advantage
           </motion.p>
-          <motion.h2 variants={fadeUp} className="font-display text-4xl lg:text-5xl font-semibold text-white mb-6">
+          <motion.h2 variants={fadeUp} className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6">
             Why Hiring a Lawyer-Broker<br />
             <span className="text-gradient">Saves You Money</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-cream-200/70 text-lg max-w-2xl mx-auto">
+          <motion.p variants={fadeUp} className="text-cream-200/70 text-base sm:text-lg max-w-2xl mx-auto">
             Most agents see the contract as a formality. An attorney-broker sees it as your first line of defense.
           </motion.p>
         </motion.div>
@@ -632,18 +632,25 @@ function Advantage() {
               <motion.div
                 key={item.aspect}
                 variants={fadeUp}
-                className="bg-navy-800/50 rounded-2xl p-6 lg:grid lg:grid-cols-[1fr,1fr,1fr] lg:gap-6 lg:items-center border border-navy-700/50"
+                className="bg-navy-800/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:grid lg:grid-cols-[1fr,1fr,1fr] lg:gap-6 lg:items-center border border-navy-700/50"
               >
-                <div className="mb-4 lg:mb-0">
-                  <p className="font-display font-semibold text-white text-lg">{item.aspect}</p>
+                <div className="mb-3 sm:mb-4 lg:mb-0">
+                  <p className="font-display font-semibold text-white text-base sm:text-lg">{item.aspect}</p>
                 </div>
-                <div className="mb-4 lg:mb-0 flex items-start gap-3">
-                  <X size={20} className="text-red-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-cream-300/70 text-sm">{item.standard}</p>
+                {/* Mobile labels */}
+                <div className="mb-3 sm:mb-4 lg:mb-0">
+                  <p className="text-red-400/70 text-[10px] sm:text-xs uppercase tracking-wider mb-1 lg:hidden">Standard Agent</p>
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <X size={18} className="text-red-400 flex-shrink-0 mt-0.5 sm:w-5 sm:h-5" />
+                    <p className="text-cream-300/70 text-xs sm:text-sm">{item.standard}</p>
+                  </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Check size={20} className="text-emerald-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-cream-100 text-sm font-medium">{item.hannah}</p>
+                <div>
+                  <p className="text-champagne-400/70 text-[10px] sm:text-xs uppercase tracking-wider mb-1 lg:hidden">Hannah Kuhami</p>
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <Check size={18} className="text-emerald-400 flex-shrink-0 mt-0.5 sm:w-5 sm:h-5" />
+                    <p className="text-cream-100 text-xs sm:text-sm font-medium">{item.hannah}</p>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -656,11 +663,11 @@ function Advantage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center mt-12"
+          className="text-center mt-8 sm:mt-12"
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-champagne-500 hover:bg-champagne-400 text-navy-900 px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-xl hover:shadow-champagne-500/30"
+            className="inline-flex items-center justify-center gap-2 bg-champagne-500 hover:bg-champagne-400 text-navy-900 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-semibold transition-all hover:shadow-xl hover:shadow-champagne-500/30 w-full sm:w-auto"
           >
             Get the Attorney Advantage
             <ArrowRight size={18} />
@@ -702,22 +709,22 @@ function Services() {
   ]
 
   return (
-    <section id="services" className="py-24 lg:py-32 bg-cream-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="services" className="py-16 sm:py-24 lg:py-32 bg-cream-50">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <motion.p variants={fadeUp} className="text-champagne-600 font-semibold tracking-wide uppercase text-sm mb-3">
+          <motion.p variants={fadeUp} className="text-champagne-600 font-semibold tracking-wide uppercase text-xs sm:text-sm mb-2 sm:mb-3">
             Services
           </motion.p>
-          <motion.h2 variants={fadeUp} className="font-display text-4xl lg:text-5xl font-semibold text-navy-900 mb-6">
+          <motion.h2 variants={fadeUp} className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-navy-900 mb-4 sm:mb-6">
             Real Estate, <span className="text-champagne-600">Legally Protected</span>
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-navy-700/70 text-lg max-w-2xl mx-auto">
+          <motion.p variants={fadeUp} className="text-navy-700/70 text-base sm:text-lg max-w-2xl mx-auto">
             From straightforward transactions to the most complex legal situations, every deal receives attorney-level attention.
           </motion.p>
         </motion.div>
@@ -728,43 +735,43 @@ function Services() {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           variants={staggerContainer}
-          className="grid md:grid-cols-2 gap-6"
+          className="grid md:grid-cols-2 gap-4 sm:gap-6"
         >
           {services.map((service) => (
             <motion.div
               key={service.title}
               variants={scaleIn}
-              className={`group relative rounded-3xl p-8 transition-all hover:shadow-xl ${
+              className={`group relative rounded-2xl sm:rounded-3xl p-5 sm:p-8 transition-all hover:shadow-xl ${
                 service.featured
                   ? 'bg-navy-900 text-white md:row-span-1'
                   : 'bg-white border border-cream-200 hover:border-champagne-300'
               }`}
             >
-              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
+              <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 ${
                 service.featured
                   ? 'bg-champagne-500/20'
                   : 'bg-champagne-50'
               }`}>
-                <service.icon size={28} className={service.featured ? 'text-champagne-400' : 'text-champagne-600'} />
+                <service.icon size={24} className={`${service.featured ? 'text-champagne-400' : 'text-champagne-600'} sm:w-7 sm:h-7`} />
               </div>
 
-              <h3 className={`font-display text-2xl font-semibold mb-3 ${
+              <h3 className={`font-display text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 ${
                 service.featured ? 'text-white' : 'text-navy-900'
               }`}>
                 {service.title}
               </h3>
 
-              <p className={`mb-6 ${
+              <p className={`mb-4 sm:mb-6 text-sm sm:text-base ${
                 service.featured ? 'text-cream-200/80' : 'text-navy-700/70'
               }`}>
                 {service.description}
               </p>
 
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-2">
-                    <Check size={16} className={service.featured ? 'text-champagne-400' : 'text-champagne-600'} />
-                    <span className={`text-sm ${service.featured ? 'text-cream-200' : 'text-navy-700'}`}>
+                    <Check size={14} className={`${service.featured ? 'text-champagne-400' : 'text-champagne-600'} sm:w-4 sm:h-4`} />
+                    <span className={`text-xs sm:text-sm ${service.featured ? 'text-cream-200' : 'text-navy-700'}`}>
                       {feature}
                     </span>
                   </li>
@@ -772,8 +779,8 @@ function Services() {
               </ul>
 
               {service.featured && (
-                <div className="absolute top-6 right-6">
-                  <span className="bg-champagne-500 text-navy-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                <div className="absolute top-4 right-4 sm:top-6 sm:right-6">
+                  <span className="bg-champagne-500 text-navy-900 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full uppercase tracking-wide">
                     Specialty
                   </span>
                 </div>
@@ -788,17 +795,17 @@ function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="mt-12 bg-gradient-to-r from-navy-900 to-navy-800 rounded-3xl p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-8"
+          className="mt-8 sm:mt-12 bg-gradient-to-r from-navy-900 to-navy-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-5 sm:gap-8"
         >
-          <div className="flex -space-x-4">
-            <div className="w-20 h-20 rounded-full border-4 border-navy-900 overflow-hidden">
+          <div className="flex -space-x-3 sm:-space-x-4">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-3 sm:border-4 border-navy-900 overflow-hidden">
               <img
                 src="/images/Gemini_Generated_Image_ow8f10ow8f10ow8f.png"
                 alt="Hannah Kuhami"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="w-20 h-20 rounded-full border-4 border-navy-900 overflow-hidden">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-3 sm:border-4 border-navy-900 overflow-hidden">
               <img
                 src="/images/Gemini_Generated_Image_u8injqu8injqu8in.png"
                 alt="Savanna Kuhami"
@@ -807,16 +814,16 @@ function Services() {
             </div>
           </div>
           <div className="flex-1 text-center lg:text-left">
-            <h3 className="font-display text-2xl font-semibold text-white mb-2">
+            <h3 className="font-display text-xl sm:text-2xl font-semibold text-white mb-1 sm:mb-2">
               Team Approach: 2-for-1 Coverage
             </h3>
-            <p className="text-cream-200/70">
+            <p className="text-cream-200/70 text-sm sm:text-base">
               Hannah often partners with Savanna Kuhami, providing clients with double the availability and responsiveness without double the cost.
             </p>
           </div>
           <a
             href="#contact"
-            className="flex-shrink-0 bg-champagne-500 hover:bg-champagne-400 text-navy-900 px-6 py-3 rounded-xl font-semibold transition-all"
+            className="flex-shrink-0 bg-champagne-500 hover:bg-champagne-400 text-navy-900 px-6 py-3 rounded-xl font-semibold transition-all w-full sm:w-auto text-center"
           >
             Meet the Team
           </a>
@@ -867,20 +874,20 @@ function Blog() {
   ]
 
   return (
-    <section id="blog" className="py-24 lg:py-32 bg-cream-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="blog" className="py-16 sm:py-24 lg:py-32 bg-cream-100">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12"
+          className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 sm:gap-6 mb-8 sm:mb-12"
         >
           <div>
-            <motion.p variants={fadeUp} className="text-champagne-600 font-semibold tracking-wide uppercase text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-champagne-600 font-semibold tracking-wide uppercase text-xs sm:text-sm mb-2 sm:mb-3">
               Insights & Resources
             </motion.p>
-            <motion.h2 variants={fadeUp} className="font-display text-4xl lg:text-5xl font-semibold text-navy-900">
+            <motion.h2 variants={fadeUp} className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-navy-900">
               Legal Insights for<br />
               <span className="text-champagne-600">Smarter Decisions</span>
             </motion.h2>
@@ -888,10 +895,10 @@ function Blog() {
           <motion.a
             variants={fadeUp}
             href="#"
-            className="inline-flex items-center gap-2 text-navy-900 font-semibold hover:text-champagne-600 transition-colors"
+            className="inline-flex items-center gap-2 text-navy-900 font-semibold hover:text-champagne-600 transition-colors text-sm sm:text-base"
           >
             View All Articles
-            <ArrowRight size={18} />
+            <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px]" />
           </motion.a>
         </motion.div>
 
@@ -901,32 +908,32 @@ function Blog() {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           variants={staggerContainer}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
         >
           {/* Featured Post */}
           <motion.article
             variants={scaleIn}
             className="md:col-span-2 lg:col-span-2 lg:row-span-2 group cursor-pointer"
           >
-            <div className="relative h-full rounded-3xl overflow-hidden bg-navy-900">
+            <div className="relative h-full min-h-[300px] sm:min-h-[400px] lg:min-h-0 rounded-2xl sm:rounded-3xl overflow-hidden bg-navy-900">
               <img
                 src={posts[0].image}
                 alt={posts[0].title}
                 className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/50 to-transparent" />
-              <div className="relative h-full flex flex-col justify-end p-8 lg:p-12">
-                <span className="inline-block bg-champagne-500 text-navy-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4 w-fit">
+              <div className="relative h-full flex flex-col justify-end p-5 sm:p-8 lg:p-12">
+                <span className="inline-block bg-champagne-500 text-navy-900 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full uppercase tracking-wide mb-3 sm:mb-4 w-fit">
                   {posts[0].category}
                 </span>
-                <h3 className="font-display text-2xl lg:text-3xl font-semibold text-white mb-4 group-hover:text-champagne-300 transition-colors">
+                <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-semibold text-white mb-2 sm:mb-4 group-hover:text-champagne-300 transition-colors">
                   {posts[0].title}
                 </h3>
-                <p className="text-cream-200/80 mb-4 line-clamp-2">
+                <p className="text-cream-200/80 mb-3 sm:mb-4 line-clamp-2 text-sm sm:text-base">
                   {posts[0].excerpt}
                 </p>
-                <div className="flex items-center gap-2 text-cream-300/60 text-sm">
-                  <Clock size={14} />
+                <div className="flex items-center gap-2 text-cream-300/60 text-xs sm:text-sm">
+                  <Clock size={12} className="sm:w-[14px] sm:h-[14px]" />
                   <span>{posts[0].readTime}</span>
                 </div>
               </div>
@@ -938,7 +945,7 @@ function Blog() {
             <motion.article
               key={post.title}
               variants={scaleIn}
-              className="group cursor-pointer bg-white rounded-3xl overflow-hidden border border-cream-200 hover:border-champagne-300 hover:shadow-lg transition-all"
+              className="group cursor-pointer bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-cream-200 hover:border-champagne-300 hover:shadow-lg transition-all"
             >
               <div className="aspect-[16/10] overflow-hidden">
                 <img
@@ -947,18 +954,18 @@ function Blog() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="p-6">
-                <span className="text-champagne-600 text-xs font-bold uppercase tracking-wide">
+              <div className="p-4 sm:p-6">
+                <span className="text-champagne-600 text-[10px] sm:text-xs font-bold uppercase tracking-wide">
                   {post.category}
                 </span>
-                <h3 className="font-display text-lg font-semibold text-navy-900 mt-2 mb-3 group-hover:text-champagne-700 transition-colors line-clamp-2">
+                <h3 className="font-display text-base sm:text-lg font-semibold text-navy-900 mt-1.5 sm:mt-2 mb-2 sm:mb-3 group-hover:text-champagne-700 transition-colors line-clamp-2">
                   {post.title}
                 </h3>
-                <p className="text-navy-700/70 text-sm line-clamp-2 mb-4">
+                <p className="text-navy-700/70 text-xs sm:text-sm line-clamp-2 mb-3 sm:mb-4">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center gap-2 text-navy-500 text-sm">
-                  <Clock size={14} />
+                <div className="flex items-center gap-2 text-navy-500 text-xs sm:text-sm">
+                  <Clock size={12} className="sm:w-[14px] sm:h-[14px]" />
                   <span>{post.readTime}</span>
                 </div>
               </div>
@@ -989,45 +996,45 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-navy-900 relative overflow-hidden">
+    <section id="contact" className="py-16 sm:py-24 lg:py-32 bg-navy-900 relative overflow-hidden">
       {/* Decorative */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-champagne-500/30 to-transparent" />
-      <div className="absolute top-1/4 right-0 w-72 h-72 bg-champagne-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-0 w-48 sm:w-72 h-48 sm:h-72 bg-champagne-500/5 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="grid lg:grid-cols-2 gap-16"
+          className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16"
         >
           {/* Info Side */}
           <motion.div variants={staggerContainer}>
-            <motion.p variants={fadeUp} className="text-champagne-400 font-semibold tracking-wide uppercase text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-champagne-400 font-semibold tracking-wide uppercase text-xs sm:text-sm mb-2 sm:mb-3">
               Get In Touch
             </motion.p>
-            <motion.h2 variants={fadeUp} className="font-display text-4xl lg:text-5xl font-semibold text-white mb-6">
+            <motion.h2 variants={fadeUp} className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6">
               Ready to Work with<br />
               <span className="text-gradient">an Attorney-Broker?</span>
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-cream-200/70 text-lg mb-10">
+            <motion.p variants={fadeUp} className="text-cream-200/70 text-base sm:text-lg mb-8 sm:mb-10">
               Whether you're buying, selling, or navigating a complex real estate situation, I'm here to protect your interests and achieve the best possible outcome.
             </motion.p>
 
             {/* Contact Info */}
-            <motion.div variants={staggerContainer} className="space-y-6 mb-10">
+            <motion.div variants={staggerContainer} className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
               <motion.a
                 variants={fadeUp}
                 href="tel:6194196517"
-                className="flex items-center gap-4 group"
+                className="flex items-center gap-3 sm:gap-4 group"
               >
-                <div className="w-14 h-14 bg-champagne-500/10 rounded-2xl flex items-center justify-center group-hover:bg-champagne-500/20 transition-colors">
-                  <Phone size={24} className="text-champagne-400" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-champagne-500/10 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:bg-champagne-500/20 transition-colors">
+                  <Phone size={20} className="text-champagne-400 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <p className="text-cream-300/60 text-sm">Call or Text</p>
-                  <p className="text-white font-display text-xl font-semibold group-hover:text-champagne-400 transition-colors">
+                  <p className="text-cream-300/60 text-xs sm:text-sm">Call or Text</p>
+                  <p className="text-white font-display text-lg sm:text-xl font-semibold group-hover:text-champagne-400 transition-colors">
                     (619) 419-6517
                   </p>
                 </div>
@@ -1036,26 +1043,26 @@ function Contact() {
               <motion.a
                 variants={fadeUp}
                 href="mailto:hannah@zealpropertygroup.net"
-                className="flex items-center gap-4 group"
+                className="flex items-center gap-3 sm:gap-4 group"
               >
-                <div className="w-14 h-14 bg-champagne-500/10 rounded-2xl flex items-center justify-center group-hover:bg-champagne-500/20 transition-colors">
-                  <Mail size={24} className="text-champagne-400" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-champagne-500/10 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:bg-champagne-500/20 transition-colors">
+                  <Mail size={20} className="text-champagne-400 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <p className="text-cream-300/60 text-sm">Email</p>
-                  <p className="text-white font-display text-xl font-semibold group-hover:text-champagne-400 transition-colors">
+                  <p className="text-cream-300/60 text-xs sm:text-sm">Email</p>
+                  <p className="text-white font-display text-base sm:text-xl font-semibold group-hover:text-champagne-400 transition-colors break-all sm:break-normal">
                     hannah@zealpropertygroup.net
                   </p>
                 </div>
               </motion.a>
 
-              <motion.div variants={fadeUp} className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-champagne-500/10 rounded-2xl flex items-center justify-center">
-                  <MapPin size={24} className="text-champagne-400" />
+              <motion.div variants={fadeUp} className="flex items-center gap-3 sm:gap-4">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-champagne-500/10 rounded-xl sm:rounded-2xl flex items-center justify-center">
+                  <MapPin size={20} className="text-champagne-400 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <p className="text-cream-300/60 text-sm">Service Area</p>
-                  <p className="text-white font-display text-xl font-semibold">
+                  <p className="text-cream-300/60 text-xs sm:text-sm">Service Area</p>
+                  <p className="text-white font-display text-lg sm:text-xl font-semibold">
                     All of San Diego County
                   </p>
                 </div>
@@ -1065,17 +1072,17 @@ function Contact() {
             {/* Brokerage Info */}
             <motion.div
               variants={fadeUp}
-              className="bg-navy-800/50 rounded-2xl p-6 border border-navy-700/50"
+              className="bg-navy-800/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-navy-700/50"
             >
-              <p className="text-cream-300/60 text-sm mb-2">Licensed with</p>
-              <p className="text-white font-display font-semibold text-lg mb-4">LPT Realty, Inc.</p>
-              <div className="flex flex-wrap gap-4 text-sm">
+              <p className="text-cream-300/60 text-xs sm:text-sm mb-1 sm:mb-2">Licensed with</p>
+              <p className="text-white font-display font-semibold text-base sm:text-lg mb-3 sm:mb-4">LPT Realty, Inc.</p>
+              <div className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm">
                 <div className="flex items-center gap-2">
-                  <Scale size={14} className="text-champagne-400" />
+                  <Scale size={12} className="text-champagne-400 sm:w-[14px] sm:h-[14px]" />
                   <span className="text-cream-200">CA Bar #286162</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Home size={14} className="text-champagne-400" />
+                  <Home size={12} className="text-champagne-400 sm:w-[14px] sm:h-[14px]" />
                   <span className="text-cream-200">DRE #02023639</span>
                 </div>
               </div>
@@ -1086,15 +1093,15 @@ function Contact() {
           <motion.div variants={fadeUp}>
             <form
               onSubmit={handleSubmit}
-              className="bg-white rounded-3xl p-8 lg:p-10 shadow-2xl shadow-navy-950/50"
+              className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 shadow-2xl shadow-navy-950/50"
             >
-              <h3 className="font-display text-2xl font-semibold text-navy-900 mb-6">
+              <h3 className="font-display text-xl sm:text-2xl font-semibold text-navy-900 mb-4 sm:mb-6">
                 Send a Message
               </h3>
 
-              <div className="space-y-5">
+              <div className="space-y-4 sm:space-y-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-navy-700 mb-2">
+                  <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-navy-700 mb-1.5 sm:mb-2">
                     Full Name
                   </label>
                   <input
@@ -1103,14 +1110,14 @@ function Contact() {
                     required
                     value={formState.name}
                     onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-cream-300 focus:border-champagne-500 focus:ring-2 focus:ring-champagne-500/20 transition-all"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-cream-300 focus:border-champagne-500 focus:ring-2 focus:ring-champagne-500/20 transition-all text-sm sm:text-base"
                     placeholder="Your name"
                   />
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-5">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-navy-700 mb-2">
+                    <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-navy-700 mb-1.5 sm:mb-2">
                       Email
                     </label>
                     <input
@@ -1119,12 +1126,12 @@ function Contact() {
                       required
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-cream-300 focus:border-champagne-500 focus:ring-2 focus:ring-champagne-500/20 transition-all"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-cream-300 focus:border-champagne-500 focus:ring-2 focus:ring-champagne-500/20 transition-all text-sm sm:text-base"
                       placeholder="you@example.com"
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-navy-700 mb-2">
+                    <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-navy-700 mb-1.5 sm:mb-2">
                       Phone
                     </label>
                     <input
@@ -1132,21 +1139,21 @@ function Contact() {
                       id="phone"
                       value={formState.phone}
                       onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-cream-300 focus:border-champagne-500 focus:ring-2 focus:ring-champagne-500/20 transition-all"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-cream-300 focus:border-champagne-500 focus:ring-2 focus:ring-champagne-500/20 transition-all text-sm sm:text-base"
                       placeholder="(619) 000-0000"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-navy-700 mb-2">
+                  <label htmlFor="service" className="block text-xs sm:text-sm font-medium text-navy-700 mb-1.5 sm:mb-2">
                     I'm interested in...
                   </label>
                   <select
                     id="service"
                     value={formState.service}
                     onChange={(e) => setFormState({ ...formState, service: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-cream-300 focus:border-champagne-500 focus:ring-2 focus:ring-champagne-500/20 transition-all bg-white"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-cream-300 focus:border-champagne-500 focus:ring-2 focus:ring-champagne-500/20 transition-all bg-white text-sm sm:text-base"
                   >
                     <option value="">Select a service</option>
                     <option value="buying">Buying a Home</option>
@@ -1159,7 +1166,7 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-navy-700 mb-2">
+                  <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-navy-700 mb-1.5 sm:mb-2">
                     Message
                   </label>
                   <textarea
@@ -1168,7 +1175,7 @@ function Contact() {
                     required
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-cream-300 focus:border-champagne-500 focus:ring-2 focus:ring-champagne-500/20 transition-all resize-none"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-cream-300 focus:border-champagne-500 focus:ring-2 focus:ring-champagne-500/20 transition-all resize-none text-sm sm:text-base"
                     placeholder="Tell me about your real estate needs..."
                   />
                 </div>
@@ -1176,23 +1183,23 @@ function Contact() {
                 <button
                   type="submit"
                   disabled={submitted}
-                  className="w-full bg-navy-900 hover:bg-navy-800 text-white px-8 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+                  className="w-full bg-navy-900 hover:bg-navy-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold transition-all flex items-center justify-center gap-2 disabled:opacity-70 text-sm sm:text-base"
                 >
                   {submitted ? (
                     <>
-                      <Check size={20} />
+                      <Check size={18} className="sm:w-5 sm:h-5" />
                       Message Sent!
                     </>
                   ) : (
                     <>
-                      <Send size={18} />
+                      <Send size={16} className="sm:w-[18px] sm:h-[18px]" />
                       Send Message
                     </>
                   )}
                 </button>
               </div>
 
-              <p className="text-center text-navy-500 text-sm mt-6">
+              <p className="text-center text-navy-500 text-xs sm:text-sm mt-4 sm:mt-6">
                 I typically respond within 2-4 hours during business hours.
               </p>
             </form>
@@ -1206,42 +1213,42 @@ function Contact() {
 // Footer
 function Footer() {
   return (
-    <footer className="py-12 lg:py-16" style={{ backgroundColor: '#050B14' }}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+    <footer className="py-10 sm:py-12 lg:py-16" style={{ backgroundColor: '#050B14' }}>
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-champagne-500 rounded-lg flex items-center justify-center">
-                <span className="font-display font-bold text-navy-900 text-lg">HK</span>
+          <div className="col-span-2 lg:col-span-2">
+            <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-champagne-500 rounded-lg flex items-center justify-center">
+                <span className="font-display font-bold text-navy-900 text-sm sm:text-lg">HK</span>
               </div>
               <div>
-                <p className="font-display font-semibold text-white text-lg">Hannah Kuhami</p>
-                <p className="text-champagne-400 text-xs">Attorney-Broker</p>
+                <p className="font-display font-semibold text-white text-base sm:text-lg">Hannah Kuhami</p>
+                <p className="text-champagne-400 text-[10px] sm:text-xs">Attorney-Broker</p>
               </div>
             </div>
-            <p className="text-gray-400 max-w-md mb-6">
+            <p className="text-gray-400 max-w-md mb-4 sm:mb-6 text-sm sm:text-base">
               The negotiation power of an attorney, the local expertise of a broker. Protecting your interests from contract to closing in San Diego County.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               <a href="tel:6194196517" className="text-gray-300 hover:text-champagne-400 transition-colors">
-                <Phone size={20} />
+                <Phone size={18} className="sm:w-5 sm:h-5" />
               </a>
               <a href="mailto:hannah@zealpropertygroup.net" className="text-gray-300 hover:text-champagne-400 transition-colors">
-                <Mail size={20} />
+                <Mail size={18} className="sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {['About', 'Services', 'Blog', 'Contact'].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
-                    className="text-gray-400 hover:text-champagne-400 transition-colors text-sm"
+                    className="text-gray-400 hover:text-champagne-400 transition-colors text-xs sm:text-sm"
                   >
                     {link}
                   </a>
@@ -1252,13 +1259,13 @@ function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
-            <ul className="space-y-3">
+            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Services</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {['Buying & Selling', 'Trust & Probate', 'Divorce Real Estate', 'Property Management'].map((service) => (
                 <li key={service}>
                   <a
                     href="#services"
-                    className="text-gray-400 hover:text-champagne-400 transition-colors text-sm"
+                    className="text-gray-400 hover:text-champagne-400 transition-colors text-xs sm:text-sm"
                   >
                     {service}
                   </a>
@@ -1269,24 +1276,24 @@ function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <p className="text-gray-500 text-sm">
+        <div className="border-t border-gray-700 pt-6 sm:pt-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 sm:gap-4">
+            <p className="text-gray-500 text-xs sm:text-sm">
               © {new Date().getFullYear()} Hannah Kuhami. All rights reserved.
             </p>
-            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
-              <span className="flex items-center gap-1.5">
-                <Scale size={14} className="text-champagne-500" />
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-400">
+              <span className="flex items-center gap-1 sm:gap-1.5">
+                <Scale size={12} className="text-champagne-500 sm:w-[14px] sm:h-[14px]" />
                 CA Bar #286162
               </span>
-              <span className="flex items-center gap-1.5">
-                <Home size={14} className="text-champagne-500" />
+              <span className="flex items-center gap-1 sm:gap-1.5">
+                <Home size={12} className="text-champagne-500 sm:w-[14px] sm:h-[14px]" />
                 DRE #02023639
               </span>
               <span>LPT Realty, Inc.</span>
             </div>
           </div>
-          <p className="text-gray-600 text-xs mt-4">
+          <p className="text-gray-600 text-[10px] sm:text-xs mt-3 sm:mt-4">
             The information provided on this website does not constitute legal advice. For specific legal questions, please consult directly.
           </p>
         </div>
