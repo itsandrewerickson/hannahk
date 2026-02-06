@@ -185,20 +185,22 @@ function Hero() {
         style={{ y }}
         className="absolute inset-0 z-0"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/images/hero1.jpg')`,
-          }}
+        {/* Using img tag for better responsive focal point control */}
+        <img
+          src="/images/hero1.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-[70%_center] md:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-900 via-navy-900/95 to-navy-900/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-transparent to-navy-900/50" />
+        {/* Gradient overlays - adjusted for mobile readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-900 via-navy-900/90 to-navy-900/60 md:from-navy-900 md:via-navy-900/95 md:to-navy-900/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/30 to-navy-900/60 md:via-transparent md:to-navy-900/50" />
       </motion.div>
 
       {/* Content */}
       <motion.div
         style={{ opacity }}
-        className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-40"
+        className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40"
       >
         <div className="max-w-3xl">
           {/* Badge */}
@@ -206,10 +208,10 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-champagne-500/10 border border-champagne-500/30 rounded-full px-4 py-1.5 mb-8"
+            className="inline-flex items-center gap-2 bg-champagne-500/10 border border-champagne-500/30 rounded-full px-3 sm:px-4 py-1.5 mb-6 sm:mb-8"
           >
             <Scale size={14} className="text-champagne-400" />
-            <span className="text-champagne-300 text-sm font-medium">Dual Licensed Attorney & Broker</span>
+            <span className="text-champagne-300 text-xs sm:text-sm font-medium">Dual Licensed Attorney & Broker</span>
           </motion.div>
 
           {/* Headline */}
@@ -217,7 +219,7 @@ function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-6"
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-5 sm:mb-6"
           >
             Don't Just Hire<br />
             <span className="text-gradient">an Agent.</span><br />
@@ -229,7 +231,7 @@ function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-xl lg:text-2xl text-cream-200/80 mb-8 leading-relaxed font-light max-w-2xl"
+            className="text-lg sm:text-xl lg:text-2xl text-cream-200/80 mb-6 sm:mb-8 leading-relaxed font-light max-w-2xl"
           >
             The negotiation power of an attorney, the local expertise of a broker. Protecting your interests from contract to closing.
           </motion.p>
@@ -239,33 +241,33 @@ function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex flex-wrap gap-8 mb-10"
+            className="grid grid-cols-3 gap-4 sm:flex sm:flex-wrap sm:gap-8 mb-8 sm:mb-10"
           >
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-champagne-500/10 rounded-xl flex items-center justify-center">
-                <Gavel size={20} className="text-champagne-400" />
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-3 text-center sm:text-left">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-champagne-500/10 rounded-xl flex items-center justify-center">
+                <Gavel size={18} className="text-champagne-400 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <p className="text-2xl font-display font-semibold text-white">13+</p>
-                <p className="text-cream-300/60 text-sm">Years Attorney</p>
+                <p className="text-xl sm:text-2xl font-display font-semibold text-white">13+</p>
+                <p className="text-cream-300/60 text-xs sm:text-sm">Years Attorney</p>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-champagne-500/10 rounded-xl flex items-center justify-center">
-                <Home size={20} className="text-champagne-400" />
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-3 text-center sm:text-left">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-champagne-500/10 rounded-xl flex items-center justify-center">
+                <Home size={18} className="text-champagne-400 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <p className="text-2xl font-display font-semibold text-white">9+</p>
-                <p className="text-cream-300/60 text-sm">Years Broker</p>
+                <p className="text-xl sm:text-2xl font-display font-semibold text-white">9+</p>
+                <p className="text-cream-300/60 text-xs sm:text-sm">Years Broker</p>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-champagne-500/10 rounded-xl flex items-center justify-center">
-                <Globe size={20} className="text-champagne-400" />
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-3 text-center sm:text-left">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-champagne-500/10 rounded-xl flex items-center justify-center">
+                <Globe size={18} className="text-champagne-400 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <p className="text-2xl font-display font-semibold text-white">4</p>
-                <p className="text-cream-300/60 text-sm">Languages</p>
+                <p className="text-xl sm:text-2xl font-display font-semibold text-white">4</p>
+                <p className="text-cream-300/60 text-xs sm:text-sm">Languages</p>
               </div>
             </div>
           </motion.div>
@@ -275,18 +277,18 @@ function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
             <a
               href="#contact"
-              className="group inline-flex items-center gap-2 bg-champagne-500 hover:bg-champagne-400 text-navy-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all hover:shadow-xl hover:shadow-champagne-500/30"
+              className="group inline-flex items-center justify-center gap-2 bg-champagne-500 hover:bg-champagne-400 text-navy-900 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-semibold text-base sm:text-lg transition-all hover:shadow-xl hover:shadow-champagne-500/30"
             >
               Work with an Attorney-Broker
-              <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1 sm:w-5 sm:h-5" />
             </a>
             <a
               href="tel:6194196517"
-              className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-medium transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/20 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-medium transition-all"
             >
               <Phone size={18} />
               (619) 419-6517
@@ -295,12 +297,12 @@ function Hero() {
         </div>
       </motion.div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - hidden on mobile */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
         <div className="flex flex-col items-center gap-2 text-white/40">
           <span className="text-xs tracking-widest uppercase">Scroll</span>
